@@ -1,76 +1,95 @@
 import json
+from datetime import datetime
 
-def load_foods_from_file(file_path="foods.json"):
+#loads in json file, helper function
+def load_data_from_file(file_path="foods.json"):
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data
 
-
-
-def find_food_by_name(data, food_name):
-    for food in data["foods"]:
-        if food["name"].lower() == food_name.lower():
-            return food
-    return None 
-
-
-def add_review_to_food(food, user, rating, comment):
-    new_review = {
-        "user": user,
-        "rating": rating,
-        "comment": comment
-    }
-    food["reviews"].append(new_review)
-
-
-
-def save_foods_to_file(data, file_path="foods.json"):
+def save_data_to_file(data, file_path="foods.json"):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
 
-def add_review():
-    data = load_foods_from_file("foods.json")
-    target_food_name = input("Enter in the name of the food: ")
-    food = find_food_by_name(data, target_food_name)
 
-    if food is None:
-        print("Food not found")
+
+#search for food by name and hall, helper function
+def find_food_by_name(data, food_name, hall_name):
+    if hall_name not in data:
+        print("Hall not found")
+        return None
+    
+    hall_data = data[hall_name]
+
+    for meal_time, stations in hall_data.items():
+        for station_name, food_list in stations.items():
+            for food in food_list:
+                if (food["name"].lower() ==  food_name.lower()):
+                    return food
+    
+    print("Food not found")
+    return None
+
+
+#helper function
+def get_average_rating(food):
+    sum = 0
+    count = 0
+    if "reviews" in food:
+        for review in food["reviews"]:
+            sum += review.get("rating")
+            count += 1
+
+        return round(sum/count)
     else:
-        print(food)
-        user_input = input("Enter name: ")
-        rating_input = int(input("Enter rating: "))
-        comment_input = input("Enter comment: ")
-        add_review_to_food(food, user=user_input, rating=rating_input, comment=comment_input)
-        save_foods_to_file(data, "foods.json")
+        return ("No reviews yet")
 
-def view_review():
-    data = load_foods_from_file("foods.json")
-    target_food_name = input("Enter in the name of the food: ")
-    food = find_food_by_name(data, target_food_name)
+
+
+
+
+
+#return food dict, includes reviews
+def view_review(target_food_name, target_hall_name):
+    data = load_data_from_file("foods.json")
+    food = find_food_by_name(data, target_food_name, target_hall_name)
     if food is None:
         print("Food not found")
         return
-    
-    if "reviews" in food:
-        for review in food["reviews"]:
-            user = review.get("user")
-            rating = review.get("rating")
-            comment = review.get("comment")
-            print(f"User: {user}, Rating: {rating}, Comment: {comment}")
-    else:
-        print("No reviews as of now, check back later!")
-    
 
-def get_average_rating(food):
-    sum = 0
-    if "reviews" in food:
-        for review in food["reviews"]:
-            sum += reviews.get("rating")
-    else:
-        print("No reviews found not found")
+    return food
+
+def find_food(location, meal, station, food):
+    data = load_data_from_file("foods.json")
+
+    if not (any(item.get("name") == food for item in data[location][meal][station])): # food doesn't exist
+        data[location][meal][station].append({"name": food, "reviews": []})
+
+    save_data_to_file(data)
+
+def exists_reviews(location, meal, station, food):
+    data = load_data_from_file("foods.json")
+    for food_item in data[location][meal][station]:
+        if food_item["name"] == food:
+            if food_item["reviews"] == []:
+                return False
+            else:
+                return True
+
+def add_review(location, meal, station, food, username, rating, comment):
+    formatted_date = datetime.now().strftime("%m/%d/%Y")
+    data = load_data_from_file("foods.json")
+    for food_item in data[location][meal][station]:
+        if food_item["name"] == food:
+            food_item["reviews"].append({"user": username, "rating": rating, "comment": comment, "date": formatted_date})
+    save_data_to_file(data)
 
 
-# add_review()
 
-view_review()
+
+
+
+#print(view_review("Basic Pizza", "de-la-guerra"))
+#print(add_review("Basic Pizza", "de-la-guerra", "Tim", 5, "Very very good"))
+

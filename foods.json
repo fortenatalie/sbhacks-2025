@@ -1,39 +1,145 @@
 {
-    "foods": [
-        {
-            "name": "Pizza",
-            "reviews": [
-                {
-                    "user": "John",
-                    "rating": 4,
-                    "comment": "Tasty crust"
-                },
-                {
-                    "user": "Josh",
-                    "rating": 5,
-                    "comment": "I love pizza"
-                },
-                {
-                    "user": "Gaucho",
-                    "rating": 10,
-                    "comment": "Pizza is the best"
-                },
-                {
-                    "user": "Josh2",
-                    "rating": 1,
-                    "comment": "Not good"
-                }
-            ]
+    "de-la-guerra": {
+        "breakfast": {
+            "Grill (Cafe)": [],
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
+            "To Order": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
         },
-        {
-            "name": "Pasta",
-            "reviews": [
-                {
-                    "user": "Gaucho",
-                    "rating": 4,
-                    "comment": "Very good"
-                }
-            ]
+        "brunch": {
+            "Grill (Cafe)": [],
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
+            "To Order": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
+        },
+        "lunch": {
+            "Grill (Cafe)": [],
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
+            "To Order": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
+        },
+        "dinner": {
+            "Grill (Cafe)": [],
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
+            "To Order": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
         }
-    ]
+    },
+    "carrillo": {
+        "breakfast": {
+            "Deli": [],
+            "Mongolian Grill": [],
+            "Salads": [],
+            "Euro": [],
+            "Pasta": [],
+            "Pizza": [],
+            "Grill (Cafe)": [],
+            "Bakery": []
+        },
+        "brunch": {
+            "Deli": [
+                {
+                    "name": "test",
+                    "reviews": []
+                }
+            ],
+            "Mongolian Grill": [],
+            "Salads": [],
+            "Euro": [],
+            "Pasta": [],
+            "Pizza": [],
+            "Grill (Cafe)": [],
+            "Bakery": []
+        },
+        "lunch": {
+            "Deli": [],
+            "Mongolian Grill": [],
+            "Salads": [],
+            "Euro": [],
+            "Pasta": [],
+            "Pizza": [],
+            "Grill (Cafe)": [],
+            "Bakery": []
+        },
+        "dinner": {
+            "Deli": [],
+            "Mongolian Grill": [],
+            "Salads": [],
+            "Euro": [],
+            "Pasta": [],
+            "Pizza": [],
+            "Grill (Cafe)": [],
+            "Bakery": []
+        }
+    },
+    "portola": {
+        "breakfast": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "International": [],
+            "The Grill": []
+        },
+        "brunch": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "International": [],
+            "The Grill": []
+        },
+        "lunch": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "International": [],
+            "The Grill": []
+        },
+        "dinner": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "International": [],
+            "The Grill": []
+        }
+    },
+    "ortega": {
+        "lunch": {
+            "Entree Specials": [],
+            "Entrees": [],
+            "Sides": [],
+            "Desserts": [],
+            "Whole Fruit": [],
+            "Beverages": [],
+            "Condiments": []
+        },
+        "dinner": {
+            "Entree Specials": [],
+            "Entrees": [],
+            "Sides": [],
+            "Desserts": [],
+            "Whole Fruit": [],
+            "Beverages": [],
+            "Condiments": []
+        }
+    }
 }
