@@ -1,0 +1,39 @@
+{
+    "foods": [
+        {
+            "name": "Pizza",
+            "reviews": [
+                {
+                    "user": "John",
+                    "rating": 4,
+                    "comment": "Tasty crust"
+                },
+                {
+                    "user": "Josh",
+                    "rating": 5,
+                    "comment": "I love pizza"
+                },
+                {
+                    "user": "Gaucho",
+                    "rating": 10,
+                    "comment": "Pizza is the best"
+                },
+                {
+                    "user": "Josh2",
+                    "rating": 1,
+                    "comment": "Not good"
+                }
+            ]
+        },
+        {
+            "name": "Pasta",
+            "reviews": [
+                {
+                    "user": "Gaucho",
+                    "rating": 4,
+                    "comment": "Very good"
+                }
+            ]
+        }
+    ]
+}
