@@ -1,66 +1,70 @@
 {
     "de-la-guerra": {
-      "brunch": {
-        "Blue Plate Special": [],
-        "Pizza": [
-            {
-                "name": "Basic Pizza",
-                "reviews": [
-                    {
-                        "user": "gaucho",
-                        "rating": 4,
-                        "comment": "good"
-                    }
-                ]
-            }
-        ],
-        "Grill (Cafe)": [],
-        "Salads/Deli (West Side)": [],
-        "Bakery": []
-      },
-      "dinner": {
-        "Blue Plate Special": [],
-        "Taqueria (East Side)": [],
-        "Pizza": [],
-        "To Order": [],
-        "Salads/Deli (West Side)": [],
-        "Bakery": []
-      }
+        "brunch": {
+            "Blue Plate Special": [],
+            "Pizza": [
+                {
+                    "name": "Basic Pizza",
+                    "reviews": [
+                        {
+                            "user": "gaucho",
+                            "rating": 4,
+                            "comment": "good"
+                        },
+                        {
+                            "user": "Josh",
+                            "rating": 5,
+                            "comment": "Very very good"
+                        }
+                    ]
+                }
+            ],
+            "Grill (Cafe)": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
+        },
+        "dinner": {
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
+            "To Order": [],
+            "Salads/Deli (West Side)": [],
+            "Bakery": []
+        }
     },
     "carrillo": {
-      "brunch": {
-        "Deli": [],
-        "Salads": [],
-        "Euro": [],
-        "Grill (Cafe)": [],
-        "Bakery": []
-      },
-      "dinner": {
-        "Mongolian Grill": [],
-        "Salads": [],
-        "Euro": [],
-        "Pasta": [],
-        "Pizza": [],
-        "Bakery": []
-      }
+        "brunch": {
+            "Deli": [],
+            "Salads": [],
+            "Euro": [],
+            "Grill (Cafe)": [],
+            "Bakery": []
+        },
+        "dinner": {
+            "Mongolian Grill": [],
+            "Salads": [],
+            "Euro": [],
+            "Pasta": [],
+            "Pizza": [],
+            "Bakery": []
+        }
     },
     "portola": {
-      "brunch": {
-        "Greens & Grains": [],
-        "Salad Bar Featured Items": [],
-        "The Brick": [],
-        "Bakery": [],
-        "Chef's Choice": [],
-        "The Grill": []
-      },
-      "dinner": {
-        "Greens & Grains": [],
-        "Salad Bar Featured Items": [],
-        "The Brick": [],
-        "Bakery": [],
-        "Chef's Choice": [],
-        "International": []
-      }
+        "brunch": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "The Grill": []
+        },
+        "dinner": {
+            "Greens & Grains": [],
+            "Salad Bar Featured Items": [],
+            "The Brick": [],
+            "Bakery": [],
+            "Chef's Choice": [],
+            "International": []
+        }
     }
-  }
-  
+}
