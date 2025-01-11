@@ -10,30 +10,10 @@
             "Bakery": []
         },
         "brunch": {
-            "Blue Plate Special": [],
-            "Pizza": [
-                {
-                    "name": "Basic Pizza",
-                    "reviews": [
-                        {
-                            "user": "gaucho",
-                            "rating": 4,
-                            "comment": "good"
-                        },
-                        {
-                            "user": "Josh",
-                            "rating": 5,
-                            "comment": "Very very good"
-                        },
-                        {
-                            "user": "Test",
-                            "rating": 5,
-                            "comment": "Very very good"
-                        }
-                    ]
-                }
-            ],
             "Grill (Cafe)": [],
+            "Blue Plate Special": [],
+            "Taqueria (East Side)": [],
+            "Pizza": [],
             "To Order": [],
             "Salads/Deli (West Side)": [],
             "Bakery": []
