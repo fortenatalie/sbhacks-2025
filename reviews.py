@@ -7,11 +7,28 @@ def load_foods_from_file(file_path="foods.json"):
 
 
 
-def find_food_by_name(data, food_name):
+def find_food_by_name(data, food_name, hall_name):
+    ''' 
     for food in data["foods"]:
         if food["name"].lower() == food_name.lower():
             return food
     return None 
+    '''
+
+    if hall_name not in data:
+        print("Hall not found")
+        return None
+    
+    hall_data = data[hall_name]
+
+    for meal_time, stations in hall_data.items():
+        for station_name, food_list in stations.items():
+            for food in food_list:
+                if (food["name"].lower() ==  food_name.lower()):
+                    return food
+    
+    print("Food not found")
+    return None
 
 
 def add_review_to_food(food, user, rating, comment):
@@ -47,10 +64,13 @@ def add_review():
 def view_review():
     data = load_foods_from_file("foods.json")
     target_food_name = input("Enter in the name of the food: ")
-    food = find_food_by_name(data, target_food_name)
+    target_hall_name = input("Enter the name of the dining hall: ")
+    food = find_food_by_name(data, target_food_name, target_hall_name)
     if food is None:
         print("Food not found")
         return
+
+    print(food["name"])
     
     if "reviews" in food:
         for review in food["reviews"]:
@@ -71,6 +91,8 @@ def get_average_rating(food):
         print("No reviews found not found")
 
 
+
 # add_review()
 
 view_review()
+
