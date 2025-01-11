@@ -114,7 +114,13 @@ def exists_reviews(location, meal, station, food):
                 return False
             else:
                 return True
-    
+
+def add_review(location, meal, station, food, username, rating, comment):
+    data = load_foods_from_file("foods.json")
+    for food_item in data[location][meal][station]:
+        if food_item["name"] == food:
+            food_item["reviews"].append({"user": username, "rating": rating, "comment": comment, "date": formatted_date})
+    save_foods_to_file(data)
 
 
 
