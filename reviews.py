@@ -97,6 +97,14 @@ def view_review(target_food_name, target_hall_name):
 
     '''
     return food
+
+def find_food(location, meal, station, food):
+    data = load_foods_from_file("foods.json")
+
+    if not (any(item.get("name") == food for item in data[location][meal][station])): # food doesn't exist
+        data[location][meal][station].append({"name": food, "reviews": []})
+
+    save_foods_to_file(data)
     
 
 
