@@ -11,6 +11,14 @@ def save_data_to_file(data, file_path="foods.json"):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
+def get_amount(food):
+    count = 0
+    for review in food["reviews"]:
+        count += 1
+    
+    return count
+
+
 
 
 
