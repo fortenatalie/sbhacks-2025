@@ -66,5 +66,25 @@
             "Chef's Choice": [],
             "International": []
         }
-    }
+    },
+    "ortega": {
+        "lunch": {
+            "Entree Specials": [],
+            "Entrees": [],
+            "Sides": [],
+            "Desserts": [],
+            "Whole Fruit": [],
+            "Beverages": [],
+            "Condiments": []
+        },
+        "dinner": {
+            "Entree Specials": [],
+            "Entrees": [],
+            "Sides": [],
+            "Desserts": [],
+            "Whole Fruit": [],
+            "Beverages": [],
+            "Condiments": []
+        }
+        }
 }
