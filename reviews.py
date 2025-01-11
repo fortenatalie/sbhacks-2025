@@ -105,6 +105,15 @@ def find_food(location, meal, station, food):
         data[location][meal][station].append({"name": food, "reviews": []})
 
     save_foods_to_file(data)
+
+def exists_reviews(location, meal, station, food):
+    data = load_foods_from_file("foods.json")
+    for food_item in data[location][meal][station]:
+        if food_item["name"] == food:
+            if food_item["reviews"] == []:
+                return False
+            else:
+                return True
     
 
 
