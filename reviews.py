@@ -82,6 +82,11 @@ def add_review(location, meal, station, food, username, rating, comment):
     data = load_data_from_file("foods.json")
     for food_item in data[location][meal][station]:
         if food_item["name"] == food:
+            for review in food_item["reviews"]:
+                if review["user"] == username and review["date"] == formatted_date:
+                    review["comment"] = comment
+                    review["rating"] = rating
+                    return
             food_item["reviews"].append({"user": username, "rating": rating, "comment": comment, "date": formatted_date})
     save_data_to_file(data)
 
