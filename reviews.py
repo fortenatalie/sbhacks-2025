@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 #loads in json file, helper function
 def load_foods_from_file(file_path="foods.json"):
@@ -116,6 +117,7 @@ def exists_reviews(location, meal, station, food):
                 return True
 
 def add_review(location, meal, station, food, username, rating, comment):
+    formatted_date = datetime.now().strftime("%m/%d/%Y")
     data = load_foods_from_file("foods.json")
     for food_item in data[location][meal][station]:
         if food_item["name"] == food:
