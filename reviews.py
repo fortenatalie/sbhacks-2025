@@ -48,6 +48,10 @@ def view_review():
     data = load_foods_from_file("foods.json")
     target_food_name = input("Enter in the name of the food: ")
     food = find_food_by_name(data, target_food_name)
+    if food is None:
+        print("Food not found")
+        return
+    
     if "reviews" in food:
         for review in food["reviews"]:
             user = review.get("user")
@@ -56,6 +60,7 @@ def view_review():
             print(f"User: {user}, Rating: {rating}, Comment: {comment}")
     else:
         print("No reviews as of now, check back later!")
+    
 
 def get_average_rating(food):
     sum = 0
