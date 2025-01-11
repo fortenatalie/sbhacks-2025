@@ -36,10 +36,10 @@ def get_average_rating(food):
         for review in food["reviews"]:
             sum += review.get("rating")
             count += 1
+
+        return round(sum/count)
     else:
-        print("No reviews found not found")
-    
-    return (sum/count)
+        return ("No reviews yet")
 
 
 #helper function
