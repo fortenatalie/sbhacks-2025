@@ -24,6 +24,11 @@
                             "user": "Josh",
                             "rating": 5,
                             "comment": "Very very good"
+                        },
+                        {
+                            "user": "Test",
+                            "rating": 5,
+                            "comment": "Very very good"
                         }
                     ]
                 }
@@ -64,7 +69,12 @@
             "Bakery": []
         },
         "brunch": {
-            "Deli": [],
+            "Deli": [
+                {
+                    "name": "test",
+                    "reviews": []
+                }
+            ],
             "Mongolian Grill": [],
             "Salads": [],
             "Euro": [],
@@ -151,5 +161,5 @@
             "Beverages": [],
             "Condiments": []
         }
-        }
+    }
 }
