@@ -2,6 +2,9 @@ import requests
 import json
 from datetime import datetime, timezone, timedelta
 
+def is_weekend(date):
+    return date.weekday() in [5, 6]
+
 def get_menu():
     current_time = datetime.now(timezone(timedelta(hours=-8)))
     formatted_time = current_time.isoformat()
@@ -12,7 +15,12 @@ def get_menu():
     }
 
     dining_halls = ['de-la-guerra', 'carrillo', 'portola', 'ortega']
-    meals = ['Breakfast', 'Brunch', 'Lunch', 'Dinner']
+    
+    if is_weekend(current_time):
+        meals = ['Brunch', 'Dinner']
+    else:
+        meals = ['Breakfast', 'Lunch', 'Dinner']
+
     todays_meals = {}
 
     for location in dining_halls:
@@ -35,8 +43,10 @@ def get_menu():
                     station_food_map[station].append(food_name)
                 
                 todays_meals[location][meal] = station_food_map
+    print(todays_meals)
     
     return todays_meals
+get_menu()
 
 def adjust_menu_vegetarian(meals_map):
     veg_map = {}
