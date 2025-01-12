@@ -1,6 +1,6 @@
 {
     "de-la-guerra": {
-        "breakfast": {
+        "Breakfast": {
             "Grill (Cafe)": [],
             "Blue Plate Special": [],
             "Taqueria (East Side)": [],
@@ -9,7 +9,7 @@
             "Salads/Deli (West Side)": [],
             "Bakery": []
         },
-        "brunch": {
+        "Brunch": {
             "Grill (Cafe)": [],
             "Blue Plate Special": [
                 {
@@ -27,7 +27,7 @@
             "Salads/Deli (West Side)": [],
             "Bakery": []
         },
-        "lunch": {
+        "Lunch": {
             "Grill (Cafe)": [],
             "Blue Plate Special": [],
             "Taqueria (East Side)": [],
@@ -36,28 +36,48 @@
             "Salads/Deli (West Side)": [],
             "Bakery": []
         },
-        "dinner": {
+        "Dinner": {
             "Grill (Cafe)": [],
-            "Blue Plate Special": [],
-            "Taqueria (East Side)": [],
+            "Blue Plate Special": [
+                {
+                    "name": "Split Pea Soup (vgn)",
+                    "reviews": []
+                }
+            ],
+            "Taqueria (East Side)": [
+                {
+                    "name": "Chicken Soft Taco",
+                    "reviews": []
+                }
+            ],
             "Pizza": [],
-            "To Order": [],
+            "To Order": [
+                {
+                    "name": "Pork Sweet & Sour Stir Fry with Rice",
+                    "reviews": []
+                }
+            ],
             "Salads/Deli (West Side)": [],
             "Bakery": []
         }
     },
     "carrillo": {
-        "breakfast": {
+        "Breakfast": {
             "Deli": [],
             "Mongolian Grill": [],
             "Salads": [],
             "Euro": [],
             "Pasta": [],
             "Pizza": [],
-            "Grill (Cafe)": [],
+            "Grill (Cafe)": [
+                {
+                    "name": "Oatmeal (vgn)",
+                    "reviews": []
+                }
+            ],
             "Bakery": []
         },
-        "brunch": {
+        "Brunch": {
             "Deli": [
                 {
                     "name": "test",
@@ -183,6 +203,10 @@
                             "date": "01/11/2025"
                         }
                     ]
+                },
+                {
+                    "name": "Sliced Ham",
+                    "reviews": []
                 }
             ],
             "Mongolian Grill": [],
@@ -193,7 +217,7 @@
             "Grill (Cafe)": [],
             "Bakery": []
         },
-        "lunch": {
+        "Lunch": {
             "Deli": [],
             "Mongolian Grill": [],
             "Salads": [],
@@ -203,9 +227,14 @@
             "Grill (Cafe)": [],
             "Bakery": []
         },
-        "dinner": {
+        "Dinner": {
             "Deli": [],
-            "Mongolian Grill": [],
+            "Mongolian Grill": [
+                {
+                    "name": "Sticky Rice (vgn)",
+                    "reviews": []
+                }
+            ],
             "Salads": [],
             "Euro": [],
             "Pasta": [],
@@ -215,7 +244,7 @@
         }
     },
     "portola": {
-        "breakfast": {
+        "Breakfast": {
             "Greens & Grains": [],
             "Salad Bar Featured Items": [],
             "The Brick": [],
@@ -224,7 +253,7 @@
             "International": [],
             "The Grill": []
         },
-        "brunch": {
+        "Brunch": {
             "Greens & Grains": [],
             "Salad Bar Featured Items": [],
             "The Brick": [],
@@ -233,7 +262,7 @@
             "International": [],
             "The Grill": []
         },
-        "lunch": {
+        "Lunch": {
             "Greens & Grains": [],
             "Salad Bar Featured Items": [],
             "The Brick": [],
@@ -242,7 +271,7 @@
             "International": [],
             "The Grill": []
         },
-        "dinner": {
+        "Dinner": {
             "Greens & Grains": [
                 {
                     "name": "Baked Potato (vgn)",
@@ -268,7 +297,7 @@
         }
     },
     "ortega": {
-        "lunch": {
+        "Lunch": {
             "Entree Specials": [],
             "Entrees": [],
             "Sides": [],
@@ -277,7 +306,7 @@
             "Beverages": [],
             "Condiments": []
         },
-        "dinner": {
+        "Dinner": {
             "Entree Specials": [],
             "Entrees": [],
             "Sides": [],
