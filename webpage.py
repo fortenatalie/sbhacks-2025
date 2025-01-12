@@ -5,7 +5,6 @@ from datetime import date
 import yaml
 from yaml.loader import SafeLoader
 from streamlit_extras.switch_page_button import switch_page
-from todays_food_copy import food_map
 import reviews
 st.set_page_config(initial_sidebar_state="collapsed", page_title = "UCSB Dining Hall Reviews")
 
@@ -17,6 +16,12 @@ authenticator = stauth.Authenticate(
 )
 
 col1, col2, col3, col4, col5 = st.columns(5)
+
+import get_menu
+
+if 'initialized' not in st.session_state:
+    st.session_state.initialized = False
+    food_map = get_menu.get_menu()
 
 
 
