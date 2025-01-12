@@ -50,8 +50,7 @@ def get_average_rating(food):
             count += 1
 
         return round(sum/count)
-    else:
-        return ("No reviews yet")
+    
 
 
 
