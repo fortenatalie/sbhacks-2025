@@ -11,7 +11,16 @@
         },
         "brunch": {
             "Grill (Cafe)": [],
-            "Blue Plate Special": [],
+            "Blue Plate Special": [
+                {
+                    "name": "Vegetable Noodle Soup (vgn)",
+                    "reviews": []
+                },
+                {
+                    "name": "Baked Potato (vgn)",
+                    "reviews": []
+                }
+            ],
             "Taqueria (East Side)": [],
             "Pizza": [],
             "To Order": [],
@@ -53,6 +62,127 @@
                 {
                     "name": "test",
                     "reviews": []
+                },
+                {
+                    "name": "Tuna Salad",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 4,
+                            "comment": "Let's test this.",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 4,
+                            "comment": "Let's test this.",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 4,
+                            "comment": "Let's test this.",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "Testing",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "Testing again!",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "alim",
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sliced Turkey",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 3,
+                            "comment": "Mid.",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sliced Turkey Pastrami",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 2,
+                            "comment": "It was fine.",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sliced Swiss Cheese (v)",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 4,
+                            "comment": "Hello.",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sliced Cheddar Cheese (v)",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 1,
+                            "comment": "i got food poisoning",
+                            "date": "01/11/2025"
+                        }
+                    ]
                 }
             ],
             "Mongolian Grill": [],
@@ -113,12 +243,27 @@
             "The Grill": []
         },
         "dinner": {
-            "Greens & Grains": [],
+            "Greens & Grains": [
+                {
+                    "name": "Baked Potato (vgn)",
+                    "reviews": []
+                }
+            ],
             "Salad Bar Featured Items": [],
             "The Brick": [],
             "Bakery": [],
-            "Chef's Choice": [],
-            "International": [],
+            "Chef's Choice": [
+                {
+                    "name": "Roast Pork Loin with Spiced Apples",
+                    "reviews": []
+                }
+            ],
+            "International": [
+                {
+                    "name": "Beef Soft Tacos",
+                    "reviews": []
+                }
+            ],
             "The Grill": []
         }
     },
