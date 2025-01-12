@@ -7,6 +7,7 @@ from yaml.loader import SafeLoader
 from streamlit_extras.switch_page_button import switch_page
 from todays_food_copy import food_map
 import reviews
+import json
 st.set_page_config(initial_sidebar_state="collapsed", page_title = "UCSB Dining Hall Reviews")
 
 with open('config.yaml') as file:
@@ -18,6 +19,12 @@ authenticator = stauth.Authenticate(
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
+import get_menu
+
+if 'initialized' not in st.session_state:
+    st.session_state.initialized = False
+    file = open('todays_food_copy.py', 'w')
+    file.write("food_map = " + json.dumps(get_menu.get_menu(), indent=4))
 
 
 try:
@@ -154,6 +161,3 @@ try:
                 st.markdown("Nothing is being served here today.")
 except Exception as e:
     st.error(e)
-
-
-
