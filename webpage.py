@@ -2,10 +2,11 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 from datetime import date
-from todays_food_copy import food_map
 import yaml
 from yaml.loader import SafeLoader
 from streamlit_extras.switch_page_button import switch_page
+from todays_food_copy import food_map
+import reviews
 
 with open('config.yaml') as file:
     config = yaml.load(file, Loader = SafeLoader)
@@ -48,6 +49,8 @@ try:
     
             #if meal has been chosen, displays other options    
             if (len(meal) > 0):
+
+                #TODO: capitalize meal choices later
                 mealChoice = st.segmented_control("Meal",meal,selection_mode="single")
                 if (mealChoice is not None):
                     station = food_map[diningHallChoice][mealChoice]
@@ -71,7 +74,6 @@ try:
 
                             #default value is None
                             starRating = st.feedback("stars")
-
                             reviewText = st.text_area("Write your review here!")
 
                             submit = st.form_submit_button("Submit my review")
@@ -79,12 +81,53 @@ try:
                             #if review does not have a star rating after submission, tells user to submit a star rating
                             if (submit and starRating is None):
                                 st.markdown("Please submit a star rating!")
+                            #TODO: Keep duplicate reviews from being submitted
+                            elif (submit):
+                                starRating = starRating + 1
+                                reviews.find_food(diningHallChoice,mealChoice, stationChoice, dishChoice)
+                                reviews.add_review(diningHallChoice, mealChoice, stationChoice, dishChoice, st.session_state["username"], starRating, reviewText )
+                                st.markdown("Review added!")
+                        if (reviews.get_amount() == 1):
+                            st.subheader(str(reviews.get_amount()) + " User Review", divider = "gray")
+                        elif(reviews.get_amount() == 0):
+                            st.subheader("No User Reviews", divider = "gray")
+                        else:
+                            st.subheader(str(reviews.get_amount()) + " User Reviews", divider = "gray")
+
+                        foodReviews = reviews.view_review(dishChoice, diningHallChoice)
+                        #displays items in newest - oldest order
+                        if (foodReviews is not None):
+                            foodReviews = foodReviews["reviews"]
+
+                            for item in reversed(foodReviews):
+                                if (item is not None):
+                                    container = st.container(border=True)
+                                    #TODO: make the username bold later
+                                    container.write(f"**{item["user"]}**")
+                                    container.write(item["date"])
+                           
+                                    #star rating
+                                    if (item["rating"] == 5):
+                                        container.markdown(":star2: :star2: :star2: :star2: :star2:")
+                                    elif(item["rating"] == 4):
+                                        container.markdown(":star2: :star2: :star2: :star2:")
+                                    elif(item["rating"] == 3):
+                                        container.markdown(":star2: :star2: :star2:")
+                                    elif(item["rating"] == 2):
+                                        container.markdown(":star2: :star2:")
+                                    elif(item["rating"] == 1):
+                                        container.markdown(":star2:")
+
+                                    container.write(item["comment"])
+                        else:
+                            st.markdown("Be the first to leave a review!")
+                        
                     
     
-    
-        #displays if the dining hall is closed for the day
-        else:
-            st.markdown("Nothing is being served here today.")
+     
+            #displays if the dining hall is closed for the day
+            else:
+                st.markdown("Nothing is being served here today.")
 except Exception as e:
     st.error(e)
 
