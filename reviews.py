@@ -100,9 +100,15 @@ def add_review(location, meal, station, food, username, rating, comment):
 
 
 
+def sort(food, low_to_high):
+    if low_to_high:
+        food["reviews"] = sorted(food["reviews"], key=lambda x: x['rating'])
+    else:
+        food["reviews"] = sorted(food["reviews"], key=lambda x: x['rating'], reverse=True)
 
 
 
-#print(view_review("Basic Pizza", "de-la-guerra"))
-#print(add_review("Basic Pizza", "de-la-guerra", "Tim", 5, "Very very good"))
+
+
+
 
