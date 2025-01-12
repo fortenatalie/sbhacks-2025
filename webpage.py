@@ -7,6 +7,7 @@ from yaml.loader import SafeLoader
 from streamlit_extras.switch_page_button import switch_page
 from todays_food_copy import food_map
 import reviews
+st.set_page_config(initial_sidebar_state="collapsed", page_title = "UCSB Dining Hall Reviews")
 
 with open('config.yaml') as file:
     config = yaml.load(file, Loader = SafeLoader)
@@ -15,21 +16,27 @@ authenticator = stauth.Authenticate(
     config['credentials']
 )
 
+col1, col2, col3, col4, col5 = st.columns(5)
+
+
+
 try:
     authenticator.login()
     
-    with (st.form("register_form")):
-        st.markdown("New to UCSB Dining Hall Reviews?")
-        submitButton = st.form_submit_button("Sign up now.")
+    if (not st.session_state['authentication_status'] ):
+        with (st.form("register_form")):
+            st.markdown("New to UCSB Dining Hall Reviews?")
+            submitButton = st.form_submit_button("Sign up now.")
         
-        if (submitButton):
+            if (submitButton):
                 switch_page("register")
     if st.session_state['authentication_status']:
-        authenticator.logout()
+        with col5:
+            authenticator.logout()
 
         #Ex: 1/11/2025 would be 2025-01-11
         todaydate = date.today().isoformat()
-
+    
         st.title("UCSB Dining Hall Reviews")
 
 
@@ -65,8 +72,8 @@ try:
                         dish = food_map[diningHallChoice][mealChoice][stationChoice]
 
                         dishChoice = st.selectbox("Dish", dish, index = 0)
-                
-                        #Later: add users, when user submits another review on the same day for the same item, update the review
+                        reviews.find_food(diningHallChoice,mealChoice, stationChoice, dishChoice)
+                        
                         with st.form("review_form"):
                             message = "How do you feel about " + dishChoice + "?"
 
@@ -81,22 +88,30 @@ try:
                             #if review does not have a star rating after submission, tells user to submit a star rating
                             if (submit and starRating is None):
                                 st.markdown("Please submit a star rating!")
-                            #TODO: Keep duplicate reviews from being submitted
                             elif (submit):
                                 starRating = starRating + 1
-                                reviews.find_food(diningHallChoice,mealChoice, stationChoice, dishChoice)
                                 reviews.add_review(diningHallChoice, mealChoice, stationChoice, dishChoice, st.session_state["username"], starRating, reviewText )
                                 st.markdown("Review added!")
-                        if (reviews.get_amount() == 1):
-                            st.subheader(str(reviews.get_amount()) + " User Review", divider = "gray")
-                        elif(reviews.get_amount() == 0):
-                            st.subheader("No User Reviews", divider = "gray")
-                        else:
-                            st.subheader(str(reviews.get_amount()) + " User Reviews", divider = "gray")
-
+                        
                         foodReviews = reviews.view_review(dishChoice, diningHallChoice)
                         #displays items in newest - oldest order
                         if (foodReviews is not None):
+                            
+                            tempCount = 0
+                            tempSum = 0
+                            averageRating = 0
+                            for item in foodReviews["reviews"]:
+                                tempSum = tempSum + item["rating"]
+                                tempCount = tempCount + 1
+                            if (tempCount != 0):
+                                averageRating = round(tempSum/tempCount, 1)
+                            if (int(reviews.get_amount(foodReviews)) == 1):
+                                st.subheader(str(reviews.get_amount(foodReviews)) + " User Review", divider = "gray")
+                            elif(int(reviews.get_amount(foodReviews)) == 0):
+                                st.subheader("No User Reviews", divider = "gray")
+                            else:
+                                st.subheader(str(reviews.get_amount(foodReviews)) + " User Reviews - " + str(averageRating) + ":star2:", divider = "gray")
+
                             foodReviews = foodReviews["reviews"]
 
                             for item in reversed(foodReviews):
