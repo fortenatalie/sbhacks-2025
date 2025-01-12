@@ -8,6 +8,6 @@ hideSidebarNav = true
 [theme]
 primaryColor = "#94670c" #gold             
 backgroundColor = "#23273b"   # Dark navy blue background
-#secondaryBackGroundColor ="#94670c" 
+secondaryBackGroundColor ="#a38b79" 
 textColor = "#f0c46c"                  # Black text for readability
 font = "sans serif"                     # Choose a clean, sans-serif font

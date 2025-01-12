@@ -425,11 +425,30 @@
                 {
                     "name": "Baked Potato (vgn)",
                     "reviews": []
+                },
+                {
+                    "name": "Jasmine Rice (vgn)",
+                    "reviews": []
                 }
             ],
-            "Salad Bar Featured Items": [],
-            "The Brick": [],
-            "Bakery": [],
+            "Salad Bar Featured Items": [
+                {
+                    "name": "Roasted Cauliflower w/Garlic (vgn)",
+                    "reviews": []
+                }
+            ],
+            "The Brick": [
+                {
+                    "name": "Grilled BBQ Chicken Pizza",
+                    "reviews": []
+                }
+            ],
+            "Bakery": [
+                {
+                    "name": "Apple Crisp (vgn)",
+                    "reviews": []
+                }
+            ],
             "Chef's Choice": [
                 {
                     "name": "Roast Pork Loin with Spiced Apples",

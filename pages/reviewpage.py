@@ -79,7 +79,7 @@ if (diningHallChoice is not None):
                     message = "How do you feel about " + dishChoice + "?"
 
                     st.markdown(message)
-
+    
                     #default value is None
                     starRating = st.feedback("stars")
                     reviewText = st.text_area("Write your review here!")
