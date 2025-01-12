@@ -46,7 +46,7 @@ def signup():
         if submit:
             # Input validation
             if not email or not password or not username:
-                st.error("❗ Please fill in all fields.")
+                st.error("Please fill in all fields.")
             else:
                 # Check if email already exists
                 existing_users = credentials["credentials"]["usernames"]
