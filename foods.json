@@ -22,8 +22,8 @@
                     "reviews": [
                         {
                             "user": null,
-                            "rating": 5,
-                            "comment": "",
+                            "rating": 3,
+                            "comment": "chicken my GOAT",
                             "date": "01/11/2025"
                         }
                     ]
@@ -41,7 +41,14 @@
             "Pizza": [
                 {
                     "name": "Pepperoni Pizza",
-                    "reviews": []
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 4,
+                            "comment": "Dude, why'd it taste like pickles today?",
+                            "date": "01/11/2025"
+                        }
+                    ]
                 }
             ],
             "To Order": [],
@@ -207,6 +214,24 @@
                             "rating": 5,
                             "comment": "fish fear me",
                             "date": "01/11/2025"
+                        },
+                        {
+                            "user": null,
+                            "rating": 3,
+                            "comment": "dude, we literally live next to an ocean",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "josh",
+                            "rating": 2,
+                            "comment": "this fish FLOPPED",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "natalie",
+                            "rating": 4,
+                            "comment": "toss it out",
+                            "date": "01/11/2025"
                         }
                     ]
                 },
@@ -350,6 +375,10 @@
                 {
                     "name": "Sticky Rice (vgn)",
                     "reviews": []
+                },
+                {
+                    "name": "Chicken Pad Thai with Peanut (w/nuts)",
+                    "reviews": []
                 }
             ],
             "Salads": [
@@ -364,8 +393,36 @@
                     "reviews": []
                 }
             ],
-            "Pasta": [],
-            "Pizza": [],
+            "Pasta": [
+                {
+                    "name": "Pasta Carbonara",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 5,
+                            "comment": "better than buldak!",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Whole Wheat Spaghetti (vgn)",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 3,
+                            "comment": "tasted like uncooked tomatoes",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                }
+            ],
+            "Pizza": [
+                {
+                    "name": "Thai Chicken Curry Pizza (w/nuts)",
+                    "reviews": []
+                }
+            ],
             "Grill (Cafe)": [],
             "Bakery": []
         }
@@ -392,6 +449,10 @@
                             "date": "01/11/2025"
                         }
                     ]
+                },
+                {
+                    "name": "Make Your Own Waffle (v)",
+                    "reviews": []
                 }
             ],
             "Salad Bar Featured Items": [
@@ -429,6 +490,17 @@
                 {
                     "name": "Jasmine Rice (vgn)",
                     "reviews": []
+                },
+                {
+                    "name": "Chicken White Bean Chili",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 3,
+                            "comment": "just like how grandma made it",
+                            "date": "01/11/2025"
+                        }
+                    ]
                 }
             ],
             "Salad Bar Featured Items": [
