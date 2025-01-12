@@ -109,7 +109,7 @@ try:
                                     st.markdown("No duplicate reviews.")
 
                         
-                        foodReviews = reviews.view_review(dishChoice, diningHallChoice)
+                        foodReviews = reviews.view_review(diningHallChoice, mealChoice, stationChoice, dishChoice)
                         #displays items in newest - oldest order
                         if (foodReviews is not None):
                             

@@ -59,6 +59,7 @@ def get_average_rating(food):
 
 
 #return food dict, includes reviews
+'''
 def view_review(target_food_name, target_hall_name):
     data = load_data_from_file("foods.json")
     food = find_food_by_name(data, target_food_name, target_hall_name)
@@ -67,6 +68,15 @@ def view_review(target_food_name, target_hall_name):
         return
 
     return food
+'''
+
+def view_review(location, meal, station, food):
+    data = load_data_from_file("foods.json")
+    #food = find_food_by_name(data, location, meal, station, food)
+    for food_item in data[location][meal][station]:
+        if food_item["name"] == food:
+            return food_item
+
 
 def find_food(location, meal, station, food):
     data = load_data_from_file("foods.json")
@@ -101,8 +111,8 @@ def add_review(location, meal, station, food, username, rating, comment):
                     save_data_to_file(data)
                     return "updatedReview"
             food_item["reviews"].append({"user": username, "rating": rating, "comment": comment, "date": formatted_date})
+            save_data_to_file(data)
             return "newReview"
-    save_data_to_file(data)
 
 
 
