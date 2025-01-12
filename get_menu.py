@@ -7,7 +7,7 @@ from datetime import datetime, timezone, timedelta
 def get_menu():
     current_time = datetime.now(timezone(timedelta(hours=-8)))
     formatted_time = current_time.isoformat()
-
+    formatted_time = formatted_time[0:10]
     headers = {
         'accept': 'application/json',
         'ucsb-api-key': 'lr0DEL5lWLVzXJ9D8HmCxZ5gRZ20ieme',
