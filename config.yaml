@@ -4,35 +4,8 @@ credentials:
       email: alim@ucsb.edu
       name: alim
       password: abc
-    #bob:
-    #email: bob@fake.edu
-    #name: bob
-    #password: abc
-    #candace:
-    # email: candance@fake.edu
-    #name: bob
-    #password: abc
-    #dora:
-    # email: dora@fake.edu
-    #name: dora
-    #password: abc
-    #eggbert:
-    # email: eggbert@fake.edu
-    #name: eggbert
-    #password: abc
-    #finneas:
-    # email: finneas@fake.edu
-    #name: finneas
-    #password: abc
-    #goldie:
-    # email: goldie@fake.edu
-    #name: goldie
-    #password: abc
-    #henson:
-    # email: henson@fake.edu
-    # name: henson
-    # password: abc
-    #isabel:
-    # email: henseon@fake.edu
-    # name: isabel
-    # password: abc
+    alice:
+      email: alice@fake.edu
+      name: alice
+      password: abc
+   
