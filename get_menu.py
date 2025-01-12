@@ -25,26 +25,22 @@ def get_menu():
                     todays_meals[location] = {}
                 data = response.json()
                 
-                # Create a dictionary to store stations and their food items for this meal
                 station_food_map = {}
                 
                 for item in data:
                     station = item['station']
                     food_name = item['name']
                     
-                    # Add the station to the dictionary if it doesn't exist
                     if station not in station_food_map:
                         station_food_map[station] = []
                     
-                    # Append the food item to the station's list
                     station_food_map[station].append(food_name)
                 
-                # Store the station_food_map for the current meal in todays_meals
                 todays_meals[location][meal] = station_food_map
     
     return todays_meals
 
-def adjust_menu_vegetarian(meals_map): # "(v)" "(vgn)"
+def adjust_menu_vegetarian(meals_map):
     veg_map = {}
     for location, meals in meals_map.items():
         for meal, stations in meals.items():
