@@ -23,7 +23,7 @@ import get_menu
 
 if 'initialized' not in st.session_state:
     st.session_state.initialized = False
-    file = open('..\todays_food_copy.py', 'w')
+    file = open('todays_food_copy.py', 'w')
     file.write("food_map = " + json.dumps(get_menu.get_menu(), indent=4))
 if st.session_state['authentication_status']:
     with col5:
@@ -34,9 +34,6 @@ else:
     with col5:
         if (st.button("Login")):
             switch_page("webpage")
- 
-#Ex: 1/11/2025 would be 2025-01-11
-todaydate = date.today().isoformat()
     
 st.title("UCSB Dining Hall Reviews")
 
