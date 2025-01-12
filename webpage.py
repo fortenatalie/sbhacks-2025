@@ -90,8 +90,17 @@ try:
                                 st.markdown("Please submit a star rating!")
                             elif (submit):
                                 starRating = starRating + 1
-                                reviews.add_review(diningHallChoice, mealChoice, stationChoice, dishChoice, st.session_state["username"], starRating, reviewText )
-                                st.markdown("Review added!")
+                                
+                                status = reviews.add_review(diningHallChoice, mealChoice, stationChoice, dishChoice, st.session_state["username"], starRating, reviewText )
+                                
+                                
+                                if (status == "newReview"):
+                                    st.markdown("Review added!")
+                                elif (status == "updatedReview"):
+                                    st.markdown("Review updated!")
+                                elif (status == "duplicateReview"):
+                                    st.markdown("No duplicate reviews.")
+
                         
                         foodReviews = reviews.view_review(dishChoice, diningHallChoice)
                         #displays items in newest - oldest order

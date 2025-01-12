@@ -48,8 +48,9 @@ def get_average_rating(food):
         for review in food["reviews"]:
             sum += review.get("rating")
             count += 1
-
+    if (count != 0):
         return round(sum/count)
+    return 0
     
 
 
@@ -91,10 +92,16 @@ def add_review(location, meal, station, food, username, rating, comment):
         if food_item["name"] == food:
             for review in food_item["reviews"]:
                 if review["user"] == username and review["date"] == formatted_date:
+                    
+                    if (review["comment"] == comment and review["rating"] == rating):
+                        return "duplicateReview"
+                    
                     review["comment"] = comment
                     review["rating"] = rating
-                    return
+                    save_data_to_file(data)
+                    return "updatedReview"
             food_item["reviews"].append({"user": username, "rating": rating, "comment": comment, "date": formatted_date})
+            return "newReview"
     save_data_to_file(data)
 
 
