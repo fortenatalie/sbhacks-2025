@@ -19,10 +19,21 @@
             "Blue Plate Special": [
                 {
                     "name": "Vegetable Noodle Soup (vgn)",
-                    "reviews": []
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 5,
+                            "comment": "",
+                            "date": "01/11/2025"
+                        }
+                    ]
                 },
                 {
                     "name": "Baked Potato (vgn)",
+                    "reviews": []
+                },
+                {
+                    "name": "Italian Wrap",
                     "reviews": []
                 }
             ],
@@ -66,23 +77,50 @@
                 {
                     "name": "Split Pea Soup (vgn)",
                     "reviews": []
+                },
+                {
+                    "name": "Cream of Tomato Soup (v)",
+                    "reviews": []
                 }
             ],
             "Taqueria (East Side)": [
                 {
                     "name": "Chicken Soft Taco",
                     "reviews": []
+                },
+                {
+                    "name": "Chicken Bean & Rice Burrito",
+                    "reviews": []
                 }
             ],
-            "Pizza": [],
+            "Pizza": [
+                {
+                    "name": "Pepperoni Pizza",
+                    "reviews": []
+                }
+            ],
             "To Order": [
                 {
                     "name": "Pork Sweet & Sour Stir Fry with Rice",
                     "reviews": []
+                },
+                {
+                    "name": "Meat Sauce",
+                    "reviews": []
                 }
             ],
-            "Salads/Deli (West Side)": [],
-            "Bakery": []
+            "Salads/Deli (West Side)": [
+                {
+                    "name": "Caesar Salad (v)",
+                    "reviews": []
+                }
+            ],
+            "Bakery": [
+                {
+                    "name": "Pizza Bread (v)",
+                    "reviews": []
+                }
+            ]
         }
     },
     "carrillo": {
@@ -200,7 +238,7 @@
                         {
                             "user": "alim",
                             "rating": 4,
-                            "comment": "Hello.",
+                            "comment": "why so many holes? cheapskates.",
                             "date": "01/11/2025"
                         }
                     ]
@@ -230,17 +268,71 @@
                 }
             ],
             "Mongolian Grill": [],
-            "Salads": [],
+            "Salads": [
+                {
+                    "name": "Fresh Garden Pasta Salad (vgn)",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 4,
+                            "comment": "I prefer wilted greens, thank you very much.",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Caesar Salad",
+                    "reviews": []
+                }
+            ],
             "Euro": [
                 {
                     "name": "Chicken Congee",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 5,
+                            "comment": "Bock Bock",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "olivia",
+                            "rating": 1,
+                            "comment": "chicken congee??? in euro??? FAKEEEEEE",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fresh Cauliflower (vgn)",
                     "reviews": []
+                },
+                {
+                    "name": "Baked Sweet Potato (vgn)",
+                    "reviews": [
+                        {
+                            "user": null,
+                            "rating": 2,
+                            "comment": "Why is it orange",
+                            "date": "01/11/2025"
+                        }
+                    ]
                 }
             ],
             "Pasta": [],
             "Pizza": [],
-            "Grill (Cafe)": [],
-            "Bakery": []
+            "Grill (Cafe)": [
+                {
+                    "name": "Oatmeal (vgn)",
+                    "reviews": []
+                }
+            ],
+            "Bakery": [
+                {
+                    "name": "Lemon Scone (vgn)",
+                    "reviews": []
+                }
+            ]
         },
         "Lunch": {
             "Deli": [],
@@ -260,8 +352,18 @@
                     "reviews": []
                 }
             ],
-            "Salads": [],
-            "Euro": [],
+            "Salads": [
+                {
+                    "name": "Spinach Pecan Bacon & Cran Salad (w/nut)",
+                    "reviews": []
+                }
+            ],
+            "Euro": [
+                {
+                    "name": "Lemon Baked Salmon",
+                    "reviews": []
+                }
+            ],
             "Pasta": [],
             "Pizza": [],
             "Grill (Cafe)": [],
@@ -279,9 +381,31 @@
             "The Grill": []
         },
         "Brunch": {
-            "Greens & Grains": [],
-            "Salad Bar Featured Items": [],
-            "The Brick": [],
+            "Greens & Grains": [
+                {
+                    "name": "Honeydew Melon (vgn)",
+                    "reviews": [
+                        {
+                            "user": "alim",
+                            "rating": 1,
+                            "comment": "I HATE FRUITS",
+                            "date": "01/11/2025"
+                        }
+                    ]
+                }
+            ],
+            "Salad Bar Featured Items": [
+                {
+                    "name": "Roasted Cauliflower w/Garlic (vgn)",
+                    "reviews": []
+                }
+            ],
+            "The Brick": [
+                {
+                    "name": "Grilled BBQ Chicken Pizza",
+                    "reviews": []
+                }
+            ],
             "Bakery": [],
             "Chef's Choice": [],
             "International": [],

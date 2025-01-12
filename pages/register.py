@@ -54,6 +54,8 @@ def signup():
                     st.error("Email is already registered.")
                 if any(user_info["name"] == username for user_info in existing_users.values()):
                     st.error("Username is already registered.")
+                if any(user_info["name"] == "Guest User" for user_info in existing_users.values()):
+                    st.error("Reserved username!")
                 else:
                     # Generate a unique username (e.g., part before @)
                     # Add the new user to credentials

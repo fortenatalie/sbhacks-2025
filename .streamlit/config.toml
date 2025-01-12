@@ -3,3 +3,11 @@ showSidebarNavigation = false
 
 [ui]
 hideSidebarNav = true
+
+
+[theme]
+primaryColor = "#94670c" #gold             
+backgroundColor = "#23273b"   # Dark navy blue background
+#secondaryBackGroundColor ="#94670c" 
+textColor = "#f0c46c"                  # Black text for readability
+font = "sans serif"                     # Choose a clean, sans-serif font
