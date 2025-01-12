@@ -1,5 +1,3 @@
-# THIS ONLY NEEDS TO BE RUN ONCE PER DAY, SEE TODAYS_FOOD_COPY.TXT FOR TESTING PURPOSES
-
 import requests
 import json
 from datetime import datetime, timezone, timedelta
