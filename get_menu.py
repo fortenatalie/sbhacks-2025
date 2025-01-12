@@ -14,12 +14,12 @@ def get_menu():
     }
 
     dining_halls = ['de-la-guerra', 'carrillo', 'portola', 'ortega']
-    meals = ['breakfast', 'brunch', 'lunch', 'dinner']
+    meals = ['Breakfast', 'Brunch', 'Lunch', 'Dinner']
     todays_meals = {}
 
     for location in dining_halls:
         for meal in meals:
-            response = requests.get(f'https://api.ucsb.edu/dining/menu/v1/2025-01-13/{location}/{meal}', headers=headers)
+            response = requests.get(f'https://api.ucsb.edu/dining/menu/v1/{formatted_time}/{location}/{meal}', headers=headers)
             if response.status_code == 200: 
                 if location not in todays_meals:
                     todays_meals[location] = {}
