@@ -1,6 +1,7 @@
 import streamlit as st
 import yaml
 from yaml import SafeLoader
+from streamlit_extras.switch_page_button import switch_page
 from pathlib import Path
 
 st.set_page_config(initial_sidebar_state="collapsed", page_title = "UCSB Dining Hall Reviews")
@@ -30,7 +31,7 @@ def save_credentials(credentials, path):
 # ---------------------------
 
 def signup():
-    st.title("📋 Sign Up")
+    st.title("Sign Up")
 
     # Load existing credentials
     credentials = load_credentials(CREDENTIALS_PATH)
@@ -84,4 +85,9 @@ def signup():
 
 if __name__ == "__main__":
     #app()
+
     signup()
+
+    if (st.button("Return to Login")):
+        switch_page("webpage")
+
