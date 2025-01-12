@@ -10,7 +10,12 @@
             "Bakery": []
         },
         "Brunch": {
-            "Grill (Cafe)": [],
+            "Grill (Cafe)": [
+                {
+                    "name": "7 Grain Hot Cereal (vgn)",
+                    "reviews": []
+                }
+            ],
             "Blue Plate Special": [
                 {
                     "name": "Vegetable Noodle Soup (vgn)",
@@ -22,10 +27,29 @@
                 }
             ],
             "Taqueria (East Side)": [],
-            "Pizza": [],
+            "Pizza": [
+                {
+                    "name": "Pepperoni Pizza",
+                    "reviews": []
+                }
+            ],
             "To Order": [],
-            "Salads/Deli (West Side)": [],
-            "Bakery": []
+            "Salads/Deli (West Side)": [
+                {
+                    "name": "Tomato and Mozzarella Salad (v)",
+                    "reviews": []
+                }
+            ],
+            "Bakery": [
+                {
+                    "name": "Lemon Scone (v)",
+                    "reviews": []
+                },
+                {
+                    "name": "Bagels-Breads & Cereals- See for Choices",
+                    "reviews": []
+                }
+            ]
         },
         "Lunch": {
             "Grill (Cafe)": [],
@@ -87,75 +111,63 @@
                     "name": "Tuna Salad",
                     "reviews": [
                         {
-                            "user": "alim",
+                            "user": "goldie",
+                            "rating": 2,
+                            "comment": "tuna are literally endangered???",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "dora",
                             "rating": 4,
-                            "comment": "Let's test this.",
+                            "comment": "it's dining hall food.",
                             "date": "01/11/2025"
                         },
                         {
-                            "user": "alim",
-                            "rating": 4,
-                            "comment": "Let's test this.",
+                            "user": "finneas",
+                            "rating": 1,
+                            "comment": "take this tuna OUT of the salad and INTO the water",
                             "date": "01/11/2025"
                         },
                         {
-                            "user": "alim",
-                            "rating": 4,
-                            "comment": "Let's test this.",
+                            "user": "alice",
+                            "rating": 2,
+                            "comment": "slayyyyyyyyyyyed (my stomach)",
                             "date": "01/11/2025"
                         },
                         {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "Testing",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
+                            "user": "candace",
                             "rating": 5,
                             "comment": "",
                             "date": "01/11/2025"
                         },
                         {
-                            "user": "alim",
+                            "user": "eggbert",
                             "rating": 5,
-                            "comment": "Testing again!",
+                            "comment": "okay this isn't bad",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "bob",
+                            "rating": 3,
+                            "comment": "not enough protein",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "isabel",
+                            "rating": 5,
+                            "comment": "SELF SERVE FOR LIFEEEEE",
+                            "date": "01/11/2025"
+                        },
+                        {
+                            "user": "henson",
+                            "rating": 3,
+                            "comment": "Meh.",
                             "date": "01/11/2025"
                         },
                         {
                             "user": "alim",
                             "rating": 5,
-                            "comment": "",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "",
-                            "date": "01/11/2025"
-                        },
-                        {
-                            "user": "alim",
-                            "rating": 5,
-                            "comment": "",
+                            "comment": "fish fear me",
                             "date": "01/11/2025"
                         }
                     ]
@@ -198,8 +210,8 @@
                     "reviews": [
                         {
                             "user": "alim",
-                            "rating": 1,
-                            "comment": "i got food poisoning",
+                            "rating": 5,
+                            "comment": "even more food poisoning",
                             "date": "01/11/2025"
                         }
                     ]
@@ -207,11 +219,24 @@
                 {
                     "name": "Sliced Ham",
                     "reviews": []
+                },
+                {
+                    "name": "Sliced Genoa Salami",
+                    "reviews": []
+                },
+                {
+                    "name": "Sliced Provolone Cheese (v)",
+                    "reviews": []
                 }
             ],
             "Mongolian Grill": [],
             "Salads": [],
-            "Euro": [],
+            "Euro": [
+                {
+                    "name": "Chicken Congee",
+                    "reviews": []
+                }
+            ],
             "Pasta": [],
             "Pizza": [],
             "Grill (Cafe)": [],
